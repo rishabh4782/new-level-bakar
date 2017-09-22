@@ -1,0 +1,23 @@
+{
+  "name": "new-level-bakar",
+  "version": "1.0.0",
+  "description": "new-level-bakar",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishabh4782/new-level-bakar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishabh4782/new-level-bakar/issues"
+  },
+  "homepage": "https://github.com/rishabh4782/new-level-bakar#readme"
+}
