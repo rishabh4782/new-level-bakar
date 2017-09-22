@@ -12,8 +12,10 @@ app.get('/', function(req, res){
   res.send('hello express!!')
 });
 
-app.listen(3000, function(){
-  console.log('ready on port 3000');
+var port = process.env.PORT || 3000;
+
+app.listen(port, function(){
+  console.log('ready on port 3000 or ' + port);
 });
 
 
