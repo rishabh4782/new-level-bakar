@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+    <title>Your Card application</title>
+  </head>
+  <body>
+    <div class="container">
+
+           <h1>POC For A Credit Card Application</h1>
+        <p>
+           Webpage opened on: <%= new Date()%>
+        </p>
+        <p>Enter your name to Proceed:  <input type="text" name="guestUser">
+        </p>
+
+        <form action="/proceed" method="post">
+          <input type="submit" name="" value="Proceed to POC">
+        </form>
+    </div>
+  </body>
+</html>
