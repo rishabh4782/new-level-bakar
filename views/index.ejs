@@ -2,23 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://bootstrapdocs.com/v3.3.1/docs/examples/cover/cover.css" rel="stylesheet">
     <title>Your Card application</title>
   </head>
   <body>
-    <div class="container">
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Some Bank</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
 
-           <h1>POC For A Credit Card Application</h1>
-        <p>
-           Webpage opened on: <%= new Date()%>
-        </p>
-        <p>Enter your name to Proceed:  <input type="text" name="guestUser">
-        </p>
+          <div class="inner cover">
+            <h1 class="cover-heading">POC For A Credit Card Application</h1>
+            <p class="lead">Webpage opened on: <%= new Date()%></p>
+            <p class="lead">Enter your name to Proceed:  <input class="btn-default" type="text" name="guestUser">
+            </p>
+            <p class="lead">
 
-        <form action="/proceed" method="post">
-          <input type="submit" name="" value="Proceed to POC">
-        </form>
+              <form action="/proceed" method="post">
+                <input type="submit" name="" class="btn btn-lg btn-default" value="Proceed to POC">
+              </form>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>This POC uses Express with Bootstrap.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
   </body>
 </html>
+
+<scripts>
+
+</scripts>
