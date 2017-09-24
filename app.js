@@ -24,7 +24,8 @@ app.get('/', function(req, res){
 app.post('/proceed', function(req, res){
   console.log('Proceed clicked');
   var guestUser = req.body.guestUser;
-  res.redirect('/welcome')
+  console.log('user : ' + guestUser);
+  res.render('welcome');
 });
 
 app.get('/welcome', function(req, res){
