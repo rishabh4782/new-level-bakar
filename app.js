@@ -20,17 +20,25 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
-
 app.post('/proceed', function(req, res){
   console.log('Proceed clicked');
   var guestUser = req.body.guestUser;
   console.log('user : ' + guestUser);
-  res.render('welcome');
+  res.render('welcome', {userName: guestUser});
 });
 
 app.get('/welcome', function(req, res){
   res.render('welcome');
 });
+
+app.get('/about', function(req, res){
+  res.render('about');
+});
+
+app.get('/contact', function(req, res){
+  res.render('contact');
+});
+
 
 var port = process.env.PORT || 3000;
 
