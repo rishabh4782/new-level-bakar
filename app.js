@@ -23,7 +23,7 @@ app.get('/', function(req, res){
 app.post('/proceed', function(req, res){
   console.log('Proceed clicked');
   var guestUser = req.body.guestUser;
-  console.log('user : ' + guestUser);
+  //console.log('user : ' + guestUser);
   res.render('welcome', {userName: guestUser});
 });
 
