@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser')
 var app = express();
+var routes = require('./routes/index');
 
 //configure app
 app.set('view engine', 'ejs');
@@ -12,33 +13,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname + 'bower_components')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-
-//define routes
-
-app.get('/', function(req, res){
-  res.render('index');
-});
-
-app.post('/proceed', function(req, res){
-  console.log('Proceed clicked');
-  var guestUser = req.body.guestUser;
-  //console.log('user : ' + guestUser);
-  res.render('welcome', {userName: guestUser});
-});
-
-app.get('/welcome', function(req, res){
-  res.render('welcome');
-});
-
-app.get('/about', function(req, res){
-  res.render('about');
-});
-
-app.get('/contact', function(req, res){
-  res.render('contact');
-});
-
+app.use('/', routes);
 
 var port = process.env.PORT || 3000;
 
@@ -47,40 +24,4 @@ app.listen(port, function(){
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const http = require('http');
-//
-// const hostname = '192.168.1.9';
-// const port = 3000;
-//
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Hello World\n');
-// });
-//
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
+module.exports = app;
